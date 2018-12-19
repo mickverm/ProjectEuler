@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -8,7 +7,7 @@ import java.util.List;
  * <p>
  * Find the largest palindrome made from the product of two 3-digit numbers.
  * <p>
- * Solution:
+ * Solution: 906609
  */
 public class Problem4 {
 
@@ -24,7 +23,7 @@ public class Problem4 {
         }
 
         Collections.sort(palindromes);
-        System.out.println("Larges: " + palindromes.get(palindromes.size() - 1));
+        System.out.println("Largest: " + palindromes.get(palindromes.size() - 1));
     }
 
     public static boolean isPalindrome(char[] text) {
