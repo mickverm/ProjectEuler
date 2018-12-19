@@ -28,6 +28,9 @@ public class Problem7 {
         return candidate - 1;
     }
 
+    /**
+     * @see Problem10#isPrime(int) for a better implementation.
+     */
     public static boolean isPrime(int n) {
         if (n % 2 == 0)
             return n == 2;
