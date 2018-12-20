@@ -23,6 +23,8 @@ public class Problem15 {
     private static final int GRID_SIZE = 20;
 
     private static void run() {
+        // Method 1:
+
         // A 20x20 grid has a 21x21 point grid
         // Using a long[][] is necessary, int[][] wont work
         long[][] grid = new long[GRID_SIZE + 1][GRID_SIZE + 1];
@@ -41,6 +43,8 @@ public class Problem15 {
 
         System.out.println("Amount of paths: " + grid[0][0]);
 
+        // Method 2;
+        // TODO: 20/12/2018 is this really correct?
         int gridSize = 20;
         long paths = 1;
 
@@ -51,6 +55,7 @@ public class Problem15 {
 
         System.out.println("Amount of paths: " + paths);
 
+        // Method 3:
         BigInteger factorialOfSum = factorial(BigInteger.valueOf(GRID_SIZE + GRID_SIZE));
         BigInteger factorialOfLength = factorial(BigInteger.valueOf(GRID_SIZE));
         BigInteger factorialOfWidth = factorial(BigInteger.valueOf(GRID_SIZE));
