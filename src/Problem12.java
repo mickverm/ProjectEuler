@@ -21,6 +21,13 @@
 public class Problem12 {
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+        run();
+        long stop = System.currentTimeMillis();
+        System.out.println("Duration: " + (stop - start) + "ms");
+    }
+
+    private static void run() {
         int i = 0;
         int triangleNumber = 1;
 
@@ -39,16 +46,13 @@ public class Problem12 {
         int nod = 0;
         int sqrt = (int) Math.sqrt(number);
 
-        for (int i = 1; i <= sqrt; i++) {
-            if (number % i == 0) {
+        for (int i = 1; i <= sqrt; i++)
+            if (number % i == 0)
                 nod += 2;
-            }
-        }
 
         //Correction if the number is a perfect square
-        if (sqrt * sqrt == number) {
+        if (sqrt * sqrt == number)
             nod--;
-        }
 
         return nod;
     }
